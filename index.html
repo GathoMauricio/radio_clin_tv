@@ -5,14 +5,21 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
         <meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		
 	
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/bootstrap.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/font.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <script type="text/javascript">
 
         function onBodyLoad()
         {       
             document.addEventListener("deviceready", onDeviceReady, false);
+			//alert("Al dar Play, la transmición puede tardar un poco en cargar,\n Por favor sea paciente.");
         }
 
         function onDeviceReady()
@@ -24,6 +31,44 @@
         </script> 
     </head>
     <body onload="onBodyLoad()">
+    
+    <!--Barra de Navegacion-->
+        <nav class="navbar navbar-inverse" role="navigation" id="barra">
+            <div class="navbar-header" >
+                    <button type="button" class="navbar-toggle " data-toggle="collapse" data-target=".navbar-ex1-collapse" >
+                    <span class="sr-only">Cambiar Navegacion</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Clin TV Mobile</a>
+                    
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li class="menu_item"><a  href="https://www.grupoclin.com/mobile" target="_blank" >
+                            <span class="glyphicon glyphicon-eye-open"></span> 
+                             Ir a grupoclin.com
+                        </a>
+                    </li>
+                    <li class="menu_item"><a href="https://www.youtube.com/channel/UC1Ek3nFE6sbjuJkx-zCvp1Q" target="_blank" >
+                            <span class="icon-youtube"></span> 
+                             Videos
+                        </a>
+                    </li>
+                    <li class="menu_item"><a href="https://www.facebook.com/gruporadioclin/photos_stream?tab=photos_albums" target="_blank">
+                            <span class="glyphicon glyphicon-picture"></span> 
+                            Fotos de la banda
+                        </a>
+                    </li>
+                    
+                </ul>
+             </div>
+        </nav>
+     <!--End Barra de Navegacion-->
+    
     <img src="img/cabecera.png" id="cabecera"/>	
     <iframe width="100%" height="auto" src="http://www.ustream.tv/embed/16016629?v=3&amp;wmode=direct&autoStart=true"  scrolling="no" frameborder="0" style="border:0px none transparent;">    </iframe>
     <center>
@@ -35,7 +80,7 @@
         <br>
         <b>Desarrollado por <br> <a href="https://www.facebook.com/katzesystems" target="_blank">Katze Systems</a></b>
         <br>
-        <img src="img/katze_logo.png" style="width:20%">  
+        <img src="img/katze_logo.png" style="width:20%">
     </center>
     </body>
 </html>
